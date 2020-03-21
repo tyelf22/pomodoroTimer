@@ -65,7 +65,7 @@ export default {
             completed: 0,
             //timer data
             timer: null,
-            totalTime: (0.10 * 60),
+            totalTime: (25 * 60),
             resetButton: false,
             taskIterations: 0,
         }
@@ -109,7 +109,7 @@ export default {
         },
         //timer methods
         startTimer: function(index) {
-            this.totalTime = 0.10 * 60
+            this.totalTime = 25 * 60
             this.timer = setInterval(() => this.countdown(), 1000);
             this.resetButton = true;
             this.addPomos(index)
@@ -126,7 +126,7 @@ export default {
             this.resetButton = true;
         },
         resetTimer: function() {
-            this.totalTime = (0.10 * 60);
+            this.totalTime = (25 * 60);
             clearInterval(this.timer);
             this.timer = null;
             this.resetButton = false;
@@ -146,10 +146,10 @@ export default {
                 this.stopTimer()
                 if(this.todos.iterator % 4 == 0){
                     console.log('inside if statement' + this.todos.iterator)
-                    this.totalTime = 0.50 * 60
+                    this.totalTime = 20 * 60
                     console.log(this.totalTime)
                 }else {
-                    this.totalTime = 0.20 * 60
+                    this.totalTime = 5 * 60
                 }
                
             }
